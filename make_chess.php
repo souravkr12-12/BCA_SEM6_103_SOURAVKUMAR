@@ -1,17 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Chess Board</title>
+<title>Chess Board</title>
+
+<style>
+
+table{
+border-collapse: collapse;
+margin: 50px auto;
+}
+
+td{
+width:60px;
+height:60px;
+}
+
+.black{
+background:black;
+}
+
+.white{
+background:white;
+}
+
+</style>
 </head>
+
 <body>
-    <table>
-        <?php
-          for($row-0;$row<8;$row++){
-            
-          }
-        ?>
-    </table>
+
+<table>
+
+<?php
+
+for($row=1;$row<=8;$row++)
+{
+    echo "<tr>";
+
+    for($col=1;$col<=8;$col++)
+    {
+        if(($row+$col)%2==0)
+        echo "<td class='white'></td>";
+        else
+        echo "<td class='black'></td>";
+    }
+
+    echo "</tr>";
+}
+
+?>
+
+</table>
+
 </body>
 </html>
